@@ -1,0 +1,131 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background-color: #000;
+  color: #ffde59;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  margin: 20px 0;
+  color: #ffde59;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Item container */
+.item {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Item image */
+.item img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Item image hover */
+.item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ffde59;
+}
+
+/* Price */
+.price {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffde59;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show price on hover */
+.item:hover .price {
+  opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust heading sizes */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Reduce item image size */
+  .item img {
+    width: 200px;
+  }
+
+  /* Adjust price font size */
+  .price {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+
+  /* Reduce body padding */
+  body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce heading sizes */
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
+  /* Further reduce item image size */
+  .item img {
+    width: 150px;
+  }
+
+  /* Compact price styling */
+  .price {
+    font-size: 0.9rem;
+    padding: 3px 6px;
+  }
+}

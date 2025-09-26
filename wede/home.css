@@ -1,0 +1,96 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Bouncing background image */
+body {
+  background: url("https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/452415044_10161844102151796_6254510441310468483_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7a06f5&_nc_ohc=IFX67BqoOZAQ7kNvwGjfd4P&_nc_oc=AdkFYdbXQH2oYX-s_bXDOWWR4_wYWZmySyaaW48T12qOEf4DxkVAjPucadeyusUTRfM&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=P4dCACa9jsov10_nvd3X6A&oh=00_AfZjK7bxmhAF0_2aQJ7dIRjAPVIFq9ZsNLRzVLj3o0h-OQ&oe=68D97728") 
+              no-repeat center/cover;
+  animation: bounceY 6s ease-in-out infinite alternate;
+  color: #fff;
+  text-align: center;
+}
+
+/* Bounce animation */
+@keyframes bounceY {
+  0%   { background-position: center top; }
+  50%  { background-position: center 40px; }
+  100% { background-position: center top; }
+}
+
+/* Headings */
+h1 a, h2 a {
+  font-size: 2rem;
+  color: #f10e0e;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Images */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.7); /* Bright blue glow */
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.6);
+  border-radius: 8px;
+}
